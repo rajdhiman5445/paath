@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap');
+
+:root {
+  color-scheme: dark;
+  --bg: #111111;
+  --text: #f2efe8;
+  --muted: #b7b0a4;
+  --line: #252525;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif Devanagari', serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.library-shell,
+.reader-shell {
+  min-height: 100%;
+  display: flex;
+}
+
+.library-shell {
+  align-items: center;
+  justify-content: center;
+  padding: 30px 22px;
+}
+
+.library-frame {
+  width: 100%;
+  max-width: 700px;
+}
+
+.app-title {
+  margin: 0 0 28px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+}
+
+.library-list {
+  display: grid;
+  gap: 6px;
+}
+
+.library-button {
+  width: 100%;
+  text-align: left;
+  padding: 18px 0;
+  font-size: clamp(1.65rem, 4vw, 2.35rem);
+  line-height: 1.18;
+  font-weight: 500;
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 78%, transparent);
+  min-height: 64px;
+}
+
+.library-button:active {
+  opacity: 0.72;
+}
+
+.reader-shell {
+  flex-direction: column;
+  height: 100%;
+}
+
+.reader-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 18px 12px;
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  transition: transform 160ms ease, opacity 160ms ease;
+  will-change: transform;
+}
+
+.reader-header.is-hidden {
+  transform: translateY(-110%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.reader-title {
+  min-width: 0;
+  text-align: left;
+  font-size: 1.02rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.font-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.font-button {
+  min-width: 32px;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.reader-scroll {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.reader-column {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  padding: 22px 22px 84px;
+  line-height: 2;
+  letter-spacing: 0.005em;
+  text-align: center;
+}
+
+.reader-column h1,
+.reader-column h2,
+.reader-column h3 {
+  margin: 1.5em 0 0.75em;
+  font-size: 1.15em;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.reader-column h1:first-child,
+.reader-column h2:first-child,
+.reader-column h3:first-child {
+  margin-top: 0;
+}
+
+.reader-column p {
+  margin: 0 0 1.25em;
+  white-space: pre-line;
+}
+
+.reader-column p:last-child {
+  margin-bottom: 0;
+}
+
+.reader-column ul,
+.reader-column ol {
+  margin: 0 0 1.25em;
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+.reader-column li + li {
+  margin-top: 0.6em;
+}
+
+.reader-column strong {
+  font-weight: 700;
+}
+
+.reader-column a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+@media (min-width: 768px) {
+  .library-shell {
+    padding: 60px 40px;
+  }
+
+  .reader-header {
+    padding: 18px 28px 14px;
+  }
+
+  .reader-column {
+    padding: 28px 28px 104px;
+  }
+}

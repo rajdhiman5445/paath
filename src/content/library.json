@@ -1,0 +1,22 @@
+[
+  {
+    "id": "hanuman-chalisa",
+    "title": "हनुमान चालीसा",
+    "file": "hanuman-chalisa.md"
+  },
+  {
+    "id": "sunderkand",
+    "title": "सुन्दरकाण्ड",
+    "file": "sunderkand.md"
+  },
+  {
+    "id": "vishnu-sahasranam",
+    "title": "विष्णु सहस्रनाम",
+    "file": "vishnu-sahasranam.md"
+  },
+  {
+    "id": "gajendra-moksha",
+    "title": "गजेन्द्र मोक्ष",
+    "file": "gajendra-moksha.md"
+  }
+]
