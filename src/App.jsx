@@ -9,7 +9,7 @@ const SCROLL_POSITIONS_KEY = 'paath.scrollPositions';
 
 const DEFAULT_FONT_SIZE = 21;
 const MIN_FONT_SIZE = 16;
-const MAX_FONT_SIZE = 28;
+const MAX_FONT_SIZE = 36;
 
 const markdownModules = import.meta.glob('./content/*.md', {
   eager: true,
